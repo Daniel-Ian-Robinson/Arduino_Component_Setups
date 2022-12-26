@@ -18,7 +18,7 @@ for line in input_lines:
         
         file_type = code_file_name[code_file_name.index("."):]
         #output_lines.append(line)
-        output_lines.append("```" + file_type + "\n")
+        output_lines.append("```" + file_type + "\n\n")
         
         for code_line in code_lines:
             output_lines.append(code_line)
