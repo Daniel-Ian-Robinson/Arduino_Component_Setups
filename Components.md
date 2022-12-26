@@ -4,7 +4,7 @@ This module emits sound at a given frequency.
 
 ![Passive Buzzer Module Schematic](/Components/passive_buzzer_module/Schematic_bb.png)
 
-```ino
+```.ino
 const int BUZZER_PIN = 7;
 
 void setup() {
@@ -19,4 +19,5 @@ void loop() {
         delay(500);
     }
 }
+
 ```
