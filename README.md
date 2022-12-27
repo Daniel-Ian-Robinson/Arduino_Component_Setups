@@ -1,3 +1,15 @@
 # Arduino Component Setups
 
-Provides schematics and code for how to setup and control numerous Arduino components.
+### Brief
+
+This repository contains schematics and code describing how to setup and control numerous Arduino components.
+
+### Adding More Components
+
+To add a new component, please follow these steps.
+
+1. Create a ```.ino``` file containing your example code for controlling your component.
+2. Create a directory in ```/Components/``` and give it exactly the same name as your ```.ino``` file (excluding the file extension).
+3. Create a schematic of your component's wiring, preferablly to an Arudino Uno and save it as an image to the directory from Step 2.
+4. Edit this version of [Components.md](https://github.com/Daniel-Ian-Robinson/Arduino_Component_Setups/blob/main/Markdown_Code_Embedder/Components.md) by including your component's name as the heading, a brief description of what it does, and your schematic.
+5. To add your code, please add a comment in the form ```<!--FileName.abc-->``` and run ```python embed_code_in_markdown.py```. This will automatically embed your code in the main version of [Components.md](https://github.com/Daniel-Ian-Robinson/Arduino_Component_Setups/blob/main/Components.md). This is helpful because it keeps the markdown document up to date with the code.
