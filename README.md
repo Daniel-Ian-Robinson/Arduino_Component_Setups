@@ -6,7 +6,7 @@ This repository contains schematics and code describing how to setup and control
 
 ### Adding More Components
 
-To add a new component, please follow these steps.
+To add a new component, please follow these steps:
 
 1. Create a ```.ino``` file containing your example code for controlling your component.
 2. Create a directory in ```/Components/``` and give it exactly the same name as your ```.ino``` file (excluding the file extension).
