@@ -1,6 +1,29 @@
+## Button
+
+Detects whether the button is being pressed or not.
+
+![Button Schematic](/Components/button/Schematic_bb.png)
+
+```../Components/button/button.ino
+
+const int BUTTON_PIN = 12;
+int buttonValue = 0;
+
+void setup() {
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
+    Serial.begin(9600);
+}
+
+void loop() {
+    buttonValue = digitalRead(BUTTON_PIN);
+    Serial.println(buttonValue);
+}
+
+```
+
 ## Passive Buzzer Module
 
-This module emits sound at a given frequency.
+Emits sound at a given frequency.
 
 ![Passive Buzzer Module Schematic](/Components/passive_buzzer_module/Schematic_bb.png)
 
