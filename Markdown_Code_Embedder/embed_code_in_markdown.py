@@ -1,4 +1,4 @@
-input_file_name = "Components_No_Code.md"
+input_file_name = "Components.md"
 output_file_name = "../Components.md"
 
 markdown_file = open(input_file_name)
