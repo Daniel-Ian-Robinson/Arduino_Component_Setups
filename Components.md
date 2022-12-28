@@ -78,6 +78,29 @@ void loop() {
 
 ```
 
+## LED
+
+A single-colour LED.
+
+![LED Schematic](/Components/led/Schematic_bb.png)
+
+```../Components/led/led.ino
+
+const int LED_PIN = 12;
+
+void setup() {
+    pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(LED_PIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_PIN, LOW);
+    delay(1000);
+}
+
+```
+
 ## Passive Buzzer Module
 
 Emits sound at a given frequency.

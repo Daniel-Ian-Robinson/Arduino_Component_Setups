@@ -26,6 +26,14 @@ Receives the following joystick input:
 
 <!--../Components/joystick_module/joystick_module.ino-->
 
+## LED
+
+A single-colour LED.
+
+![LED Schematic](/Components/led/Schematic_bb.png)
+
+<!--../Components/led/led.ino-->
+
 ## Passive Buzzer Module
 
 Emits sound at a given frequency.
