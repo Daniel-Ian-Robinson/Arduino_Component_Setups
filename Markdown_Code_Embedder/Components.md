@@ -42,6 +42,14 @@ Emits sound at a given frequency.
 
 <!--../Components/passive_buzzer_module/passive_buzzer_module.ino-->
 
+## Photoresistor
+
+Detects the brightness of the environment and reports it in the range [0, 1023] where 0 is the darkest measurement and 1023 is the brightest measurement.
+
+![Photoresistor Schematic](/Components/photoresistor/Schematic_bb.png)
+
+<!--../Components/photoresistor/photoresistor.ino-->
+
 ## Potentiometer
 
 Reads the potentiometer knob's value which is in the range [0, 1023].

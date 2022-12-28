@@ -126,6 +126,30 @@ void loop() {
 
 ```
 
+## Photoresistor
+
+Detects the brightness of the environment and reports it in the range [0, 1023] where 0 is the darkest measurement and 1023 is the brightest measurement.
+
+![Photoresistor Schematic](/Components/photoresistor/Schematic_bb.png)
+
+```../Components/photoresistor/photoresistor.ino
+
+const int PHOTORESISTOR_PIN = A5;
+int photoresistorVal = 0;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(PHOTORESISTOR_PIN, INPUT);
+}
+
+void loop() {
+    photoresistorVal = analogRead(PHOTORESISTOR_PIN);
+    Serial.println(photoresistorVal);
+    delay(10);
+}
+
+```
+
 ## Potentiometer
 
 Reads the potentiometer knob's value which is in the range [0, 1023].
