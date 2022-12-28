@@ -172,3 +172,36 @@ void loop() {
 }
 
 ```
+
+## RGB LED Module
+
+An LED that displays a colour based on the inputted Red, Green, and Blue values.
+
+![RGB LED Module Schematic](/Components/rgb_led_module/Schematic_bb.png)
+
+```../Components/rgb_led_module/rgb_led_module.ino
+
+const int RED_PIN = 3;
+const int GREEN_PIN = 5;
+const int BLUE_PIN = 6;
+
+void setup() {}
+
+void loop() {
+    analogWrite(RED_PIN, 255);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
+    
+    analogWrite(RED_PIN, 0);
+    analogWrite(GREEN_PIN, 255);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
+    
+    analogWrite(RED_PIN, 0);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 255);
+    delay(1000);
+}
+
+```

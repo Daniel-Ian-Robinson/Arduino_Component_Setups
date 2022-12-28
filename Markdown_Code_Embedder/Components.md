@@ -57,3 +57,11 @@ Reads the potentiometer knob's value which is in the range [0, 1023].
 ![Potentiometer Schematic](/Components/potentiometer/Schematic_bb.png)
 
 <!--../Components/potentiometer/potentiometer.ino-->
+
+## RGB LED Module
+
+An LED that displays a colour based on the inputted Red, Green, and Blue values.
+
+![RGB LED Module Schematic](/Components/rgb_led_module/Schematic_bb.png)
+
+<!--../Components/rgb_led_module/rgb_led_module.ino-->
