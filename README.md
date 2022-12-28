@@ -4,6 +4,8 @@
 
 This repository contains schematics and code describing how to setup and control numerous Arduino components.
 
+I have layed out this information in the following document: [Components.md](/Components.md).
+
 ### Adding More Components
 
 To add a new component, please follow these steps:
