@@ -73,3 +73,11 @@ A light that displays a colour based on the inputted Red, Green, and Blue values
 ![SMD RGB Module Schematic](/Components/smd_rgb_module/Schematic_bb.png)
 
 <!--../Components/smd_rgb_module/smd_rgb_module.ino-->
+
+## SSD1331 OLED Display
+
+A fully controllable 96x64 pixel OLED display.
+
+![SSD1331 OLED Display Schematic](/Components/ssd1331_oled_display/Schematic_bb.png)
+
+<!--../Components/ssd1331_oled_display/ssd1331_oled_display.ino-->
