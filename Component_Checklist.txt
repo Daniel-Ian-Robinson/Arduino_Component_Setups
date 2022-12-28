@@ -11,4 +11,5 @@ Potentiometer               Y           Y       Y
 RGB LED Module              Y           Y       Y
 Rotary Encoder
 SMD RGB Module              Y           Y       Y
+SSD1331 OLED Display        Y           Y       Y
 Thermistor
