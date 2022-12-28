@@ -205,3 +205,36 @@ void loop() {
 }
 
 ```
+
+## SMD RGB Module
+
+A light that displays a colour based on the inputted Red, Green, and Blue values.
+
+![SMD RGB Module Schematic](/Components/smd_rgb_module/Schematic_bb.png)
+
+```../Components/smd_rgb_module/smd_rgb_module.ino
+
+const int RED_PIN = 3;
+const int GREEN_PIN = 5;
+const int BLUE_PIN = 6;
+
+void setup() {}
+
+void loop() {
+    analogWrite(RED_PIN, 255);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
+    
+    analogWrite(RED_PIN, 0);
+    analogWrite(GREEN_PIN, 255);
+    analogWrite(BLUE_PIN, 0);
+    delay(1000);
+    
+    analogWrite(RED_PIN, 0);
+    analogWrite(GREEN_PIN, 0);
+    analogWrite(BLUE_PIN, 255);
+    delay(1000);
+}
+
+```

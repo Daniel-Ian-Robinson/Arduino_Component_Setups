@@ -1,14 +1,3 @@
-# Contents
-
-- [Active Buzzer Module](#active-buzzer-module)
-- [Button](#button)
-- [Joystick Module](#joystick-module)
-- [LED](#led)
-- [Passive Buzzer Module](#passive-buzzer-module)
-- [Photoresistor](#photoresistor)
-- [Potentiometer](#potentiometer)
-- [RGB LED Module](#rgb-led-module)
-
 ## Active Buzzer Module
 
 A simple on/off buzzer.
@@ -76,3 +65,11 @@ An LED that displays a colour based on the inputted Red, Green, and Blue values.
 ![RGB LED Module Schematic](/Components/rgb_led_module/Schematic_bb.png)
 
 <!--../Components/rgb_led_module/rgb_led_module.ino-->
+
+## SMD RGB Module
+
+A light that displays a colour based on the inputted Red, Green, and Blue values.
+
+![SMD RGB Module Schematic](/Components/smd_rgb_module/Schematic_bb.png)
+
+<!--../Components/smd_rgb_module/smd_rgb_module.ino-->
