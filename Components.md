@@ -44,6 +44,40 @@ void loop() {
 
 ```
 
+## Joystick Module
+
+Receives the following joystick input:
+
+- A value in the range [0, 1023] representing the joystick's position on the x-axis.
+- A value in the range [0, 1023] representing the joystick's position on the y-axis.
+- 0 if the button is not pressed or 1 if the button is pressed.
+
+![Joystick Module Schematic](/Components/joystick_module/Schematic_bb.png)
+
+```../Components/joystick_module/joystick_module.ino
+
+const int X_AXIS_PIN = A0;
+const int Y_AXIS_PIN = A1;
+const int BUTTON_PIN = 6;
+int xAxisVal = 0;
+int yAxisVal = 0;
+int buttonVal = 0;
+
+void setup() {   
+    Serial.begin(9600);
+    pinMode(BUTTON_PIN, INPUT);
+    digitalWrite(BUTTON_PIN, HIGH);
+}
+
+void loop() {
+    xAxisVal = analogRead(X_AXIS_PIN);
+    yAxisVal = analogRead(Y_AXIS_PIN);
+    buttonVal = !digitalRead(BUTTON_PIN);
+    Serial.println((String)xAxisVal + "\t" + (String)yAxisVal + "\t" + (String)buttonVal);
+}
+
+```
+
 ## Passive Buzzer Module
 
 Emits sound at a given frequency.

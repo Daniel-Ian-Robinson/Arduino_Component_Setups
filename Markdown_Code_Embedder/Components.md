@@ -16,7 +16,15 @@ Detects whether the button is being pressed or not.
 
 ## Joystick Module
 
+Receives the following joystick input:
 
+- A value in the range [0, 1023] representing the joystick's position on the x-axis.
+- A value in the range [0, 1023] representing the joystick's position on the y-axis.
+- 0 if the button is not pressed or 1 if the button is pressed.
+
+![Joystick Module Schematic](/Components/joystick_module/Schematic_bb.png)
+
+<!--../Components/joystick_module/joystick_module.ino-->
 
 ## Passive Buzzer Module
 
