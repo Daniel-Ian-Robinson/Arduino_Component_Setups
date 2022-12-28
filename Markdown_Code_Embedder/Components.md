@@ -14,6 +14,10 @@ Detects whether the button is being pressed or not.
 
 <!--../Components/button/button.ino-->
 
+## Joystick Module
+
+
+
 ## Passive Buzzer Module
 
 Emits sound at a given frequency.
