@@ -1,3 +1,26 @@
+## Active Buzzer Module
+
+A simple on/off buzzer.
+
+![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
+
+```../Components/active_buzzer_module/active_buzzer_module.ino
+
+const int BUZZER_PIN = 7;
+
+void setup() {
+    pinMode(BUZZER_PIN, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(BUZZER_PIN, HIGH);
+    delay(1000);
+    digitalWrite(BUZZER_PIN, LOW);
+    delay(1000);
+}
+
+```
+
 ## Button
 
 Detects whether the button is being pressed or not.

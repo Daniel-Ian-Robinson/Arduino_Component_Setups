@@ -1,3 +1,11 @@
+## Active Buzzer Module
+
+A simple on/off buzzer.
+
+![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
+
+<!--../Components/active_buzzer_module/active_buzzer_module.ino-->
+
 ## Button
 
 Detects whether the button is being pressed or not.
