@@ -1,4 +1,4 @@
-const int PHOTORESISTOR_PIN = A5;
+const int PHOTORESISTOR_PIN = A0;
 int photoresistorVal = 0;
 
 void setup() {
