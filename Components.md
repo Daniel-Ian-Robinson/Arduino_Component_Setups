@@ -35,7 +35,7 @@ void loop() {
 
 ## Button
 
-Detects whether or not the button is being held down.
+Detects whether the button is being pressed or not.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
@@ -51,7 +51,12 @@ void setup() {
 
 void loop() {
     buttonValue = digitalRead(BUTTON_PIN);
-    Serial.println(buttonValue);
+    
+    if (buttonValue == 1) {
+        Serial.println("Button Unpressed");
+    } else if (buttonValue == 0) {
+        Serial.println("Button Pressed");
+    }
 }
 
 ```
@@ -146,7 +151,7 @@ Detects the brightness of the environment and reports it in the range [0, 1023] 
 
 ```../Components/photoresistor/photoresistor.ino
 
-const int PHOTORESISTOR_PIN = A5;
+const int PHOTORESISTOR_PIN = A0;
 int photoresistorVal = 0;
 
 void setup() {

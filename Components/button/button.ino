@@ -8,5 +8,10 @@ void setup() {
 
 void loop() {
     buttonValue = digitalRead(BUTTON_PIN);
-    Serial.println(buttonValue);
+    
+    if (buttonValue == 1) {
+        Serial.println("Button Unpressed");
+    } else if (buttonValue == 0) {
+        Serial.println("Button Pressed");
+    }
 }
