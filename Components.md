@@ -63,7 +63,7 @@ void loop() {
 
 ## Joystick Module
 
-Receives the following joystick input:
+A joystick similar to that on a PlayStation 2 Controller which outputs the following:
 
 - A value in the range [0, 1023] representing the joystick's position on the x-axis.
 - A value in the range [0, 1023] representing the joystick's position on the y-axis.
