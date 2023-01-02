@@ -35,7 +35,7 @@ void loop() {
 
 ## Button
 
-Detects whether or not the button is being pressed.
+A button which can be in a pressed or unpressed position.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
