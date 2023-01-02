@@ -3,7 +3,7 @@ Component Name              Schematic   Code    Markdown    Check
 
 Active Buzzer Module        Y           Y       Y		Y
 Button                      Y           Y       Y		Y
-Joystick Module             Y           Y       Y
+Joystick Module             Y           Y       Y		Y
 LED                         Y           Y       Y
 Passive Buzzer Module       Y           Y       Y
 Photoresistor               Y           Y       Y
