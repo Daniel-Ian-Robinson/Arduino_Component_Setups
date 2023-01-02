@@ -198,7 +198,7 @@ void loop() {
 
 ## RGB LED Module
 
-An LED that displays a colour based on the inputted Red, Green, and Blue values.
+An LED that displays a colour based on the inputted red, green, and blue values.
 
 ![RGB LED Module Schematic](/Components/rgb_led_module/Schematic_bb.png)
 
