@@ -4,11 +4,11 @@
 - [Button](#button)
 - [Button Module](#button-module)
 - [Joystick Module](#joystick-module)
-- [Single-Colour LED](#single-colour-led)
 - [Passive Buzzer Module](#passive-buzzer-module)
 - [Photoresistor](#photoresistor)
 - [Potentiometer](#potentiometer)
 - [RGB LED Module](#rgb-led-module)
+- [Single-Colour LED](#single-colour-led)
 - [SSD1331 OLED Display](#ssd1331-oled-display)
 
 ## Active Buzzer Module
