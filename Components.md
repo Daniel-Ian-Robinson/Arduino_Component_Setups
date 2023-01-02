@@ -12,7 +12,7 @@
 
 ## Active Buzzer Module
 
-A simple on/off buzzer.
+A buzzer which either buzzes or stays silent.
 
 ![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
 
