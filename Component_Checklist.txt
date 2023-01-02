@@ -8,7 +8,7 @@ Joystick Module             Y           Y       Y		Y
 Passive Buzzer Module       Y           Y       Y
 Photoresistor               Y           Y       Y
 Potentiometer               Y           Y       Y
-RGB LED Module              Y           Y       Y
+RGB LED Module              Y           Y       Y		Y
 Rotary Encoder
 Single-Colour LED           Y           Y       Y		Y
 SMD RGB Module              Y           Y       Y
