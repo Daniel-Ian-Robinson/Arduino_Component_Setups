@@ -20,7 +20,7 @@ A simple on/off buzzer.
 
 ## Button
 
-Detects whether the button is being pressed or not.
+Detects whether or not the button is being pressed.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
