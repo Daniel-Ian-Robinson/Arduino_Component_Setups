@@ -36,7 +36,7 @@ void loop() {
 
 ## Button
 
-A button which can be in a pressed or unpressed position.
+A simple up/down button.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
@@ -64,7 +64,7 @@ void loop() {
 
 ## Button Module
 
-A button which can be in a pressed or unpressed position.
+A simple up/down button.
 
 ![Button Module Schematic](/Components/button_module/Schematic_bb.png)
 
