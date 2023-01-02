@@ -2,6 +2,7 @@
 
 - [Active Buzzer Module](#active-buzzer-module)
 - [Button](#button)
+- [Button Module](#button-module)
 - [Joystick Module](#joystick-module)
 - [LED](#led)
 - [Passive Buzzer Module](#passive-buzzer-module)
@@ -40,6 +41,34 @@ A button which can be in a pressed or unpressed position.
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
 ```../Components/button/button.ino
+
+const int BUTTON_PIN = 12;
+int buttonValue = 0;
+
+void setup() {
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
+    Serial.begin(9600);
+}
+
+void loop() {
+    buttonValue = digitalRead(BUTTON_PIN);
+    
+    if (buttonValue == 1) {
+        Serial.println("Button Unpressed");
+    } else if (buttonValue == 0) {
+        Serial.println("Button Pressed");
+    }
+}
+
+```
+
+## Button Module
+
+A button which can be in a pressed or unpressed position.
+
+![Button Module Schematic](/Components/button_module/Schematic_bb.png)
+
+```.ino
 
 const int BUTTON_PIN = 12;
 int buttonValue = 0;
