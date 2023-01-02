@@ -12,7 +12,7 @@
 
 ## Active Buzzer Module
 
-A simple on/off buzzer.
+A buzzer which either buzzes or stays silent.
 
 ![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
 
@@ -35,7 +35,7 @@ void loop() {
 
 ## Button
 
-Detects whether or not the button is being pressed.
+A button which can be in a pressed or unpressed position.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
