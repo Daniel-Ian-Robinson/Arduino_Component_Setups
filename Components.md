@@ -4,7 +4,7 @@
 - [Button](#button)
 - [Button Module](#button-module)
 - [Joystick Module](#joystick-module)
-- [LED](#led)
+- [Single-Colour LED](#single-colour-led)
 - [Passive Buzzer Module](#passive-buzzer-module)
 - [Photoresistor](#photoresistor)
 - [Potentiometer](#potentiometer)
@@ -124,29 +124,6 @@ void loop() {
 
 ```
 
-## LED
-
-A single-colour LED.
-
-![LED Schematic](/Components/led/Schematic_bb.png)
-
-```.ino
-
-const int LED_PIN = 12;
-
-void setup() {
-    pinMode(LED_PIN, OUTPUT);
-}
-
-void loop() {
-    digitalWrite(LED_PIN, HIGH);
-    delay(1000);
-    digitalWrite(LED_PIN, LOW);
-    delay(1000);
-}
-
-```
-
 ## Passive Buzzer Module
 
 Emits sound at a given frequency.
@@ -247,6 +224,29 @@ void loop() {
     analogWrite(RED_PIN, 0);
     analogWrite(GREEN_PIN, 0);
     analogWrite(BLUE_PIN, 255);
+    delay(1000);
+}
+
+```
+
+## Single-Colour LED
+
+A single-colour LED.
+
+![LED Schematic](/Components/single_colour_led/Schematic_bb.png)
+
+```.ino
+
+const int LED_PIN = 12;
+
+void setup() {
+    pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(LED_PIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_PIN, LOW);
     delay(1000);
 }
 
