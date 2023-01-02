@@ -2,6 +2,7 @@
 
 - [Active Buzzer Module](#active-buzzer-module)
 - [Button](#button)
+- [Button Module](#button-module)
 - [Joystick Module](#joystick-module)
 - [LED](#led)
 - [Passive Buzzer Module](#passive-buzzer-module)
@@ -12,11 +13,11 @@
 
 ## Active Buzzer Module
 
-A buzzer which either buzzes or stays silent.
+A single-frequency buzzer.
 
 ![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
 
-```../Components/active_buzzer_module/active_buzzer_module.ino
+```.ino
 
 const int BUZZER_PIN = 7;
 
@@ -35,11 +36,39 @@ void loop() {
 
 ## Button
 
-A button which can be in a pressed or unpressed position.
+A simple up/down button.
 
 ![Button Schematic](/Components/button/Schematic_bb.png)
 
-```../Components/button/button.ino
+```.ino
+
+const int BUTTON_PIN = 12;
+int buttonValue = 0;
+
+void setup() {
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
+    Serial.begin(9600);
+}
+
+void loop() {
+    buttonValue = digitalRead(BUTTON_PIN);
+    
+    if (buttonValue == 1) {
+        Serial.println("Button Unpressed");
+    } else if (buttonValue == 0) {
+        Serial.println("Button Pressed");
+    }
+}
+
+```
+
+## Button Module
+
+A simple up/down button.
+
+![Button Module Schematic](/Components/button_module/Schematic_bb.png)
+
+```.ino
 
 const int BUTTON_PIN = 12;
 int buttonValue = 0;
@@ -71,7 +100,7 @@ A joystick similar to that on a PlayStation 2 Controller which outputs the follo
 
 ![Joystick Module Schematic](/Components/joystick_module/Schematic_bb.png)
 
-```../Components/joystick_module/joystick_module.ino
+```.ino
 
 const int X_AXIS_PIN = A0;
 const int Y_AXIS_PIN = A1;
@@ -101,7 +130,7 @@ A single-colour LED.
 
 ![LED Schematic](/Components/led/Schematic_bb.png)
 
-```../Components/led/led.ino
+```.ino
 
 const int LED_PIN = 12;
 
@@ -124,7 +153,7 @@ Emits sound at a given frequency.
 
 ![Passive Buzzer Module Schematic](/Components/passive_buzzer_module/Schematic_bb.png)
 
-```../Components/passive_buzzer_module/passive_buzzer_module.ino
+```.ino
 
 const int BUZZER_PIN = 7;
 
@@ -149,7 +178,7 @@ Detects the brightness of the environment and reports it in the range [0, 1023] 
 
 ![Photoresistor Schematic](/Components/photoresistor/Schematic_bb.png)
 
-```../Components/photoresistor/photoresistor.ino
+```.ino
 
 const int PHOTORESISTOR_PIN = A0;
 int photoresistorVal = 0;
@@ -173,7 +202,7 @@ Reads the potentiometer knob's value which is in the range [0, 1023].
 
 ![Potentiometer Schematic](/Components/potentiometer/Schematic_bb.png)
 
-```../Components/potentiometer/potentiometer.ino
+```.ino
 
 const int POT_PIN = A0;
 int potVal = 0;
@@ -196,7 +225,7 @@ An LED that displays a colour based on the inputted Red, Green, and Blue values.
 
 ![RGB LED Module Schematic](/Components/rgb_led_module/Schematic_bb.png)
 
-```../Components/rgb_led_module/rgb_led_module.ino
+```.ino
 
 const int RED_PIN = 3;
 const int GREEN_PIN = 5;
@@ -229,7 +258,7 @@ A light that displays a colour based on the inputted Red, Green, and Blue values
 
 ![SMD RGB Module Schematic](/Components/smd_rgb_module/Schematic_bb.png)
 
-```../Components/smd_rgb_module/smd_rgb_module.ino
+```.ino
 
 const int RED_PIN = 3;
 const int GREEN_PIN = 5;
@@ -262,7 +291,7 @@ A fully controllable 96x64 pixel OLED display.
 
 ![SSD1331 OLED Display Schematic](/Components/ssd1331_oled_display/Schematic_bb.png)
 
-```../Components/ssd1331_oled_display/ssd1331_oled_display.ino
+```.ino
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1331.h>
