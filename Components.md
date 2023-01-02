@@ -13,7 +13,7 @@
 
 ## Active Buzzer Module
 
-A buzzer which either buzzes or stays silent.
+A single-frequency buzzer.
 
 ![Active Buzzer Module Schematic](/Components/active_buzzer_module/Schematic_bb.png)
 
