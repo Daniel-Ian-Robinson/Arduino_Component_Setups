@@ -174,7 +174,7 @@ void loop() {
 
 ## Potentiometer
 
-Reads the potentiometer knob's value which is in the range [0, 1023].
+A knob with physical lower and upper bounds. It outputs a value in the range [0, 1023].
 
 ![Potentiometer Schematic](/Components/potentiometer/Schematic_bb.png)
 
