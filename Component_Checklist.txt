@@ -1,16 +1,16 @@
-Component Name              Schematic   Code    Markdown    Check
---------------              ---------   ----    --------    -----
+Component Name              	Schematic   Code  Markdown    Check
+--------------              	---------   ----	--------    -----
 
-Active Buzzer Module        Y           Y       Y		Y
-Button                      Y           Y       Y		Y
-Button Module               Y           Y       Y		Y
-Joystick Module             Y           Y       Y		Y
-Passive Buzzer Module       Y           Y       Y		Y
-Photoresistor               Y           Y       Y		Y
-Potentiometer               Y           Y       Y		Y
-RGB LED Module              Y           Y       Y		Y
-Rotary Encoder Module
-Single-Colour LED           Y           Y       Y		Y
-SMD RGB Module              Y           Y       Y		Y
-SSD1331 OLED Display        Y           Y       Y		Y
-Thermistor
+Active Buzzer Module		Y		Y     Y		Y
+Button				Y           Y     Y		Y
+Button Module               	Y           Y     Y		Y
+Joystick Module             	Y           Y     Y		Y
+Passive Buzzer Module       	Y           Y     Y		Y
+Photoresistor               	Y           Y     Y		Y
+Potentiometer               	Y           Y     Y		Y
+RGB LED Module              	Y           Y     Y		Y
+Rotary Encoder Module		Y		Y	Y		Y	
+Single-Colour LED           	Y           Y     Y		Y
+SMD RGB Module              	Y           Y     Y		Y
+SSD1331 OLED Display        	Y           Y     Y		Y
+Thermistor				
