@@ -5,7 +5,7 @@ Active Buzzer Module        Y           Y       Y		Y
 Button                      Y           Y       Y		Y
 Button Module               Y           Y       Y		Y
 Joystick Module             Y           Y       Y		Y
-Passive Buzzer Module       Y           Y       Y
+Passive Buzzer Module       Y           Y       Y		Y
 Photoresistor               Y           Y       Y		Y
 Potentiometer               Y           Y       Y		Y
 RGB LED Module              Y           Y       Y		Y
