@@ -139,11 +139,9 @@ void setup() {
 }
 
 void loop() {
-    for (int frequency = 250; frequency <= 2000; frequency += 250) {
+    for (int frequency = 200; frequency < 1200; frequency++) {
         tone(BUZZER_PIN, frequency);
-        delay(1000);
-        noTone(BUZZER_PIN);
-        delay(500);
+        delay(10);
     }
 }
 
