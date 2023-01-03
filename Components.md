@@ -168,7 +168,6 @@ void setup() {
 void loop() {
     photoresistorVal = analogRead(PHOTORESISTOR_PIN);
     Serial.println(photoresistorVal);
-    delay(10);
 }
 
 ```
