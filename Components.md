@@ -253,7 +253,7 @@ void loop() {
 
 ## SMD RGB Module
 
-A light that displays a colour based on the inputted Red, Green, and Blue values.
+A light that displays a colour based on inputted red, green, and blue values.
 
 ![SMD RGB Module Schematic](/Components/smd_rgb_module/Schematic_bb.png)
 
