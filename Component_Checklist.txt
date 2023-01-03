@@ -9,7 +9,7 @@ Passive Buzzer Module       Y           Y       Y		Y
 Photoresistor               Y           Y       Y		Y
 Potentiometer               Y           Y       Y		Y
 RGB LED Module              Y           Y       Y		Y
-Rotary Encoder
+Rotary Encoder Module
 Single-Colour LED           Y           Y       Y		Y
 SMD RGB Module              Y           Y       Y		Y
 SSD1331 OLED Display        Y           Y       Y		Y
