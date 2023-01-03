@@ -174,7 +174,7 @@ void loop() {
 
 ## Potentiometer
 
-A knob with physical lower and upper bounds. It outputs a value in the range [0, 1023].
+A knob with physical lower and upper bounds. It outputs the knob's position using a value in the range [0, 1023].
 
 ![Potentiometer Schematic](/Components/potentiometer/Schematic_bb.png)
 
