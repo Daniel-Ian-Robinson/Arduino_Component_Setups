@@ -12,5 +12,5 @@ RGB LED Module              Y           Y       Y		Y
 Rotary Encoder
 Single-Colour LED           Y           Y       Y		Y
 SMD RGB Module              Y           Y       Y
-SSD1331 OLED Display        Y           Y       Y
+SSD1331 OLED Display        Y           Y       Y		Y
 Thermistor
