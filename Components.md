@@ -9,6 +9,7 @@
 - [Potentiometer](#potentiometer)
 - [RGB LED Module](#rgb-led-module)
 - [Single-Colour LED](#single-colour-led)
+- [SMD RGB Module](#smd-rgb-module)
 - [SSD1331 OLED Display](#ssd1331-oled-display)
 
 ## Active Buzzer Module
