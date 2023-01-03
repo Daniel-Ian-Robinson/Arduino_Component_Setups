@@ -261,11 +261,11 @@ void loop() {
 
     if (curClockState != lastClockState) {
         if (digitalRead(DT_PIN) != curClockState) {
-            counter --;
-            currentDir = "Anti-Clockwise";
-        } else {
-            counter ++;
+            counter++;
             currentDir = "Clockwise";
+        } else {
+            counter--;
+            currentDir = "Anti-Clockwise";
         }
 
         Serial.println((String)counter + "\t" + currentDir);
@@ -274,7 +274,7 @@ void loop() {
     lastClockState = curClockState;
 
     int buttonState = digitalRead(SW_PIN);
-
+    
     if (buttonState == LOW) {
         if (millis() - lastButtonPressTime > 50) {
             Serial.println("Button Pressed");
