@@ -19,13 +19,11 @@ Adafruit_SSD1331 display = Adafruit_SSD1331(CS_PIN, DC_PIN, RES_PIN);
 void setup() {
     display.begin();
 
-    // Draw text.
     display.fillScreen(BLACK);
     display.setCursor(15, 25);
     display.println("Hello world!");
     delay(3000);
 
-    // Draw randomly coloured pixels in random places.
     display.fillScreen(BLACK);
     for (int i = 0; i < 120; i++) {
         int xVal = random(0, SCREEN_WIDTH);
