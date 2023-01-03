@@ -1,50 +1,65 @@
-/*******Interrupt-based Rotary Encoder Sketch*******
-by Simon Merrett, based on insight from Oleg Mazurov, Nick Gammon, rt, Steve Spence
-*/
+// Rotary Encoder Inputs
+#define CLK_PIN 2
+#define DT_PIN  3
+#define SW_PIN  4
 
-static int pinA = 2; // Our first hardware interrupt pin is digital pin 2
-static int pinB = 3; // Our second hardware interrupt pin is digital pin 3
-volatile byte aFlag = 0; // let's us know when we're expecting a rising edge on pinA to signal that the encoder has arrived at a detent
-volatile byte bFlag = 0; // let's us know when we're expecting a rising edge on pinB to signal that the encoder has arrived at a detent (opposite direction to when aFlag is set)
-volatile byte encoderPos = 0; //this variable stores our current value of encoder position. Change to int or uin16_t instead of byte if you want to record a larger range than 0-255
-volatile byte oldEncPos = 0; //stores the last encoder position value so we can compare to the current reading and see if it has changed (so we know when to print to the serial monitor)
-volatile byte reading = 0; //somewhere to store the direct values we read from our interrupt pins before checking to see if we have moved a whole detent
+int counter = 0;
+int currentStateCLK;
+int lastStateCLK;
+String currentDir ="";
+unsigned long lastButtonPress = 0;
 
 void setup() {
-  pinMode(pinA, INPUT_PULLUP); // set pinA as an input, pulled HIGH to the logic voltage (5V or 3.3V for most cases)
-  pinMode(pinB, INPUT_PULLUP); // set pinB as an input, pulled HIGH to the logic voltage (5V or 3.3V for most cases)
-  attachInterrupt(0,PinA,RISING); // set an interrupt on PinA, looking for a rising edge signal and executing the "PinA" Interrupt Service Routine (below)
-  attachInterrupt(1,PinB,RISING); // set an interrupt on PinB, looking for a rising edge signal and executing the "PinB" Interrupt Service Routine (below)
-  Serial.begin(115200); // start the serial monitor link
+    pinMode(CLK_PIN, INPUT);
+    pinMode(DT_PIN, INPUT);
+    pinMode(SW_PIN, INPUT_PULLUP);
+
+    lastStateCLK = digitalRead(CLK_PIN);
+
+    Serial.begin(9600);
 }
 
-void PinA(){
-  cli(); //stop interrupts happening before we read pin values
-  reading = PIND & 0xC; // read all eight pin values then strip away all but pinA and pinB's values
-  if(reading == B00001100 && aFlag) { //check that we have both pins at detent (HIGH) and that we are expecting detent on this pin's rising edge
-    encoderPos --; //decrement the encoder's position count
-    bFlag = 0; //reset flags for the next turn
-    aFlag = 0; //reset flags for the next turn
-  }
-  else if (reading == B00000100) bFlag = 1; //signal that we're expecting pinB to signal the transition to detent from free rotation
-  sei(); //restart interrupts
-}
+void loop() {
+    
+    // Read the current state of CLK
+    currentStateCLK = digitalRead(CLK_PIN);
 
-void PinB(){
-  cli(); //stop interrupts happening before we read pin values
-  reading = PIND & 0xC; //read all eight pin values then strip away all but pinA and pinB's values
-  if (reading == B00001100 && bFlag) { //check that we have both pins at detent (HIGH) and that we are expecting detent on this pin's rising edge
-    encoderPos ++; //increment the encoder's position count
-    bFlag = 0; //reset flags for the next turn
-    aFlag = 0; //reset flags for the next turn
-  }
-  else if (reading == B00001000) aFlag = 1; //signal that we're expecting pinA to signal the transition to detent from free rotation
-  sei(); //restart interrupts
-}
+    // If last and current state of CLK are different, then pulse occurred
+    // React to only 1 state change to avoid double count
+    if (currentStateCLK != lastStateCLK){
 
-void loop(){
-  if(oldEncPos != encoderPos) {
-    Serial.println(encoderPos);
-    oldEncPos = encoderPos;
-  }
+        // If the DT state is different than the CLK state then
+        // the encoder is rotating CCW so decrement
+        if (digitalRead(DT_PIN) != currentStateCLK) {
+            counter --;
+            currentDir ="Anti-Clockwise";
+        } else {
+            // Encoder is rotating CW so increment
+            counter ++;
+            currentDir ="Clockwise";
+        }
+
+        Serial.println((String)counter + "\t" + currentDir);
+    }
+
+    // Remember last CLK state
+    lastStateCLK = currentStateCLK;
+
+    // Read the button state
+    int btnState = digitalRead(SW_PIN);
+
+    //If we detect LOW signal, button is pressed
+    if (btnState == LOW) {
+        //if 50ms have passed since last LOW pulse, it means that the
+        //button has been pressed, released and pressed again
+        if (millis() - lastButtonPress > 50) {
+            Serial.println("Button Pressed");
+        }
+
+        // Remember last button press event
+        lastButtonPress = millis();
+    }
+
+    // Put in a slight delay to help debounce the reading
+    delay(1);
 }
