@@ -151,7 +151,7 @@ void loop() {
 
 ## Photoresistor
 
-Detects the brightness of the environment and reports it in the range [0, 1023] where 0 is the darkest measurement and 1023 is the brightest measurement.
+Measures the environment's brightness using a value in the range [0, 1023] where 0 is the darkest measurement and 1023 is the brightest measurement.
 
 ![Photoresistor Schematic](/Components/photoresistor/Schematic_bb.png)
 
