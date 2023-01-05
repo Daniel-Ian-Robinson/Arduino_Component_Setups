@@ -4,6 +4,7 @@
 - [Button](#button)
 - [Button Module](#button-module)
 - [Joystick Module](#joystick-module)
+- [Light Cup Module](#light-cup-module)
 - [Passive Buzzer Module](#passive-buzzer-module)
 - [Photoresistor](#photoresistor)
 - [Potentiometer](#potentiometer)
@@ -122,6 +123,36 @@ void loop() {
     yAxisVal = analogRead(Y_AXIS_PIN);
     buttonVal = !digitalRead(BUTTON_PIN);
     Serial.println((String)xAxisVal + "\t" + (String)yAxisVal + "\t" + (String)buttonVal);
+}
+
+```
+
+## Light Cup Module
+
+A binary tilt sensor coupled with an LED.
+
+![Light Cup Module Schematic](/Components/light_cup_module/Schematic_bb.png)
+
+```.ino
+
+#define LED_PIN     6
+#define SWITCH_PIN  7
+
+int switchRead;
+
+void setup() {
+    pinMode(LED_PIN, OUTPUT); 
+    pinMode(SWITCH_PIN, INPUT);
+}
+
+void loop() {
+    switchRead = digitalRead(SWITCH_PIN);
+    
+    if (switchRead == HIGH) {
+        digitalWrite(LED_PIN, HIGH);
+    } else {
+        digitalWrite(LED_PIN, LOW);
+    }
 }
 
 ```
