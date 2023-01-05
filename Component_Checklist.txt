@@ -5,6 +5,7 @@ Active Buzzer Module		  Y     Y
 Button				  Y     Y
 Button Module               	  Y     Y
 Joystick Module             	  Y     Y
+Light Cup Module			  Y     Y
 Passive Buzzer Module       	  Y     Y
 Photoresistor               	  Y     Y
 Potentiometer               	  Y     Y
@@ -13,4 +14,3 @@ Rotary Encoder Module		  Y     Y
 Single-Colour LED           	  Y     Y
 SMD RGB Module              	  Y     Y
 SSD1331 OLED Display        	  Y     Y
-Thermistor				  
