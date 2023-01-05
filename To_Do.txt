@@ -1,0 +1,1 @@
+1. Include notes about components with incorrect labels (e.g., SMD RGB Module where the R and G pins the wrong way around).
